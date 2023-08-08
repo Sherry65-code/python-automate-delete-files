@@ -1,6 +1,14 @@
 import os 
 
-file_path = '/users/NAME/Downloads/FILE PATH'
+os.system("whoami > .username.txt")
+
+fr = file(".username.txt", "r")
+usrname = fr.read().strip()
+fr.close()
+
+os.remove(".username.txt")
+
+file_path = f'/users/{usrname}/Downloads/FILE PATH'
 
 print(file_path)
 
